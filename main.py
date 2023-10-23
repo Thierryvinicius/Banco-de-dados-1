@@ -4,9 +4,9 @@ from controle.clienteC import ClienteC
 
 # Configuração da conexão com o banco de dados
 
-conexao = Conexao('localhost', 'database', 'usuario', 'senha')
+conexao = Conexao('localhost', 'teste', 'postgres', '3011')
 cadastro = ClienteC(conexao)
-cadastro.cadastrar_clientes('usuario','numero','1')
+cadastro.cadastrar_clientes()
 print(cadastro.consultar_clientes())
 conexao.fechar_conexao()
 

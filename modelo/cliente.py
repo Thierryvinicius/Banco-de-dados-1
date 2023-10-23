@@ -4,8 +4,10 @@ class Cliente:
         self.telefone = telefone
         self.codigo = codigo
 
-    def cadastrar_cliente(self):
-        nome = input('Digite o nome do cliente: ')
-        telefone = input('Digite o telefone do cliente: ')
-        cod = input('Digite o codigo do cliente: ')
+    def getNome(self):
+        return self.nome
+    def getTelefone(self):
+        return self.telefone
+    def getCodigo(self):
+        return self.codigo
 
