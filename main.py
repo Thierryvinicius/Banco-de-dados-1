@@ -1,3 +1,4 @@
+from controle.produtoC import ProdutoC
 from modelo.conexao import Conexao
 from modelo.cliente import Cliente
 from controle.clienteC import ClienteC
@@ -5,8 +6,11 @@ from controle.clienteC import ClienteC
 # Configuração da conexão com o banco de dados
 
 conexao = Conexao('localhost', 'teste', 'postgres', '3011')
-cadastro = ClienteC(conexao)
-cadastro.cadastrar_clientes()
-print(cadastro.consultar_clientes())
+cadastroC = ClienteC(conexao)
+cadastroP = ProdutoC(conexao)
+cadastroC.cadastrar_clientes()
+cadastroP.cadastrar_produtos()
+print(cadastroP.consultar_produtos())
+print(cadastroC.consultar_clientes())
 conexao.fechar_conexao()
 
